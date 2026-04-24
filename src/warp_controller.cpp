@@ -103,5 +103,5 @@ void WarpController::apply_warp_value() {
                                 std::min<int>(warpdrive::constants::WARP_MAX, m_warp_value));
     m_warp_value = clamped;
 
-    XPLMSetDataf(m_ground_speed_ref, static_cast<float>(m_warp_value));
+    XPLMSetDatai(m_ground_speed_ref, m_warp_value);
 }
